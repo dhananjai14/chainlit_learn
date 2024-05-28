@@ -1,8 +1,8 @@
 echo [$(date)]: "START" # Used to provide message in terminal. To provide current date 
-echo [$(date)]: "Creating conda environment with python 3.10"
-conda create --prefixt ./env python=3.10 -y
+echo [$(date)]: "Creating conda environment with python 3.8"
+python -m venv venv
 echo [$(date)]: "conda env created"
-source activate ./env
+. venv/Scripts/activate
 echo [$(date)]: "Env activated"
 echo [$(date)]: "Installing the env"
 pip install -r requirements.txt
